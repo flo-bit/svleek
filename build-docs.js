@@ -382,8 +382,8 @@ function setLogo() {
 
 	let newLogoContent = logoContent.replace(/<slot>[\s|\S]*<\/slot>/, `<slot>${logo}</slot>`);
 
-	// replace <a href="link" with <a href="config.base_url + link"
-	newLogoContent = newLogoContent.replace(/<a href="(.*)">/, `<a href="${config.base_url}$1">`);
+	// replace <a href="link" with <a href="config.base_url"
+	newLogoContent = newLogoContent.replace(/<a href="(.*)">/, `<a href="${config.base_url}">`);
 
 	console.log(newLogoContent == logoContent);
 	fs.writeFileSync(logoPath, newLogoContent);

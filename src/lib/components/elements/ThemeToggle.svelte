@@ -52,6 +52,8 @@
   </script>
   
   <button on:click={toggleTheme} class="flex items-center justify-center {classes}" {id}>
+    <span class="sr-only">Theme Toggle</span>
+
     {#if darkMode}
       <svg
         xmlns="http://www.w3.org/2000/svg"

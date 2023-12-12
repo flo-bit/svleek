@@ -13,44 +13,7 @@
 		expanded?: boolean;
 	};
 
-	export let menu: MenuItem[] = [
-		{
-			title: 'Dashboard',
-			icon: `<svg
-									class="h-6 w-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-									/>
-								</svg>`,
-			href: '#'
-		},
-		{
-			title: 'Dashboard',
-			href: '#',
-			children: [
-				{
-					title: 'Engineering',
-					href: '#'
-				},
-				{
-					title: 'Human Resources',
-					href: '#'
-				},
-				{
-					title: 'Customer Success',
-					href: '#'
-				}
-			]
-		}
-	];
+	export let menu: MenuItem[];
 
 	function findByPath(data: MenuItem[], href: string): MenuItem | undefined {
 		for (let item of data) {
@@ -66,13 +29,10 @@
 	}
 
 	let current = findByPath(menu, window.location.pathname);
-	console.log(current);
-	console.log(window.location.pathname);
 
 	onNavigate(() => {
 		// get current menu item based on current route
 		current = findByPath(menu, window.location.pathname);
-		console.log(current);
 	});
 
 	export let hideMenu = () => {};
@@ -85,6 +45,8 @@
 		on:click={hideMenu}
 		class="lg:hidden absolute top-3 right-3 text-neutral-900 dark:text-white rounded-md p-2 hover:bg-neutral-50 dark:hover:bg-neutral-900"
 	>
+	<span class="sr-only">Close sidebar</span>
+
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"
