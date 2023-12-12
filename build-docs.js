@@ -358,9 +358,9 @@ function setupStartPage() {
 	const pageContent = fs.readFileSync(pagePath, 'utf-8');
 	const newPageContent = pageContent.replace(
 		/<HeroScreenshot [\s|\S]*\/>/,
-		`<HeroScreenshot title="${heroTitle}" subtitle="${heroSubtitle}" image="${heroScreenshot}" buttonHref="${
-			config.base_url + heroButtonHref
-		}" buttonLabel="${heroButtonLabel}"/>`
+		`<HeroScreenshot title="${heroTitle}" subtitle="${heroSubtitle}" image="${
+			config.base_url + heroScreenshot
+		}" buttonHref="${config.base_url + heroButtonHref}" buttonLabel="${heroButtonLabel}"/>`
 	);
 	fs.writeFileSync(pagePath, newPageContent);
 }
