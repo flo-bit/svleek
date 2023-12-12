@@ -1,6 +1,6 @@
 <div class="px-6 py-16 lg:px-8 max-w-[100vw]"><div class="mx-auto max-w-3xl text-base leading-7 text-neutral-700 dark:text-neutral-300"><h1 class="mt-16 text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl">Testing the documentation</h1>
 <h3 class="mt-6 text-xl leading-8">This is a very important subheading, that can be used for important things or something. I'm not completely sure yet. But it is important.</h3>
-<p class="mt-6 leading-8">This is a <a href="/docs/introduction" class="font-semibold text-accent-600 hover:text-accent-500 dark:text-accent-500 dark:hover:text-accent-400">link</a></p>
+<p class="mt-6 leading-8">This is a <a href="https://flo-bit.github.io/svleek/docs/introduction" class="font-semibold text-accent-600 hover:text-accent-500 dark:text-accent-500 dark:hover:text-accent-400">link</a></p>
 <h2 class="mt-16 text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">List</h2>
 <ul class="mt-8 space-y-4 text-neutral-600 dark:text-neutral-400">
 <li class="flex gap-x-3 items-start"><div class="mt-3 h-1.5 w-1.5 flex-none bg-accent-600 dark:bg-accent-500 rounded-full" aria-hidden="true"></div><span class="text-neutral-900 dark:text-neutral-100 font-semibold">This is a list</span></li>

@@ -4,6 +4,7 @@
     "image": "/screenshot.png",
     "first_page": "/docs/introduction",
     "button_label": "Read the docs!",
-    "github": "https://github.com/",
+    "base_url": "https://flo-bit.github.io/svleek",
+    "github": "https://github.com/flo-bit/svleek",
     "accent": "emerald"
 }
