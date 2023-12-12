@@ -26,23 +26,23 @@
 	let menu = [
   {
     "title": "Introduction",
-    "href": "/docs/introduction"
+    "href": "https://flo-bit.github.io/svleek/docs/introduction"
   },
   {
     "title": "Test",
-    "href": "/docs/test"
+    "href": "https://flo-bit.github.io/svleek/docs/test"
   },
   {
     "title": "Navigation",
-    "href": "/docs/navigation",
+    "href": "https://flo-bit.github.io/svleek/docs/navigation",
     "children": [
       {
         "title": "Topic1",
-        "href": "/docs/navigation/topic1"
+        "href": "https://flo-bit.github.io/svleek/docs/navigation/topic1"
       },
       {
         "title": "Topic2",
-        "href": "/docs/navigation/topic2"
+        "href": "https://flo-bit.github.io/svleek/docs/navigation/topic2"
       }
     ]
   }

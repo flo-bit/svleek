@@ -1,6 +1,8 @@
-# svleek - simple, beautiful and fast documentation
+# svleek - simple, beautiful and fast static documentation generator
 
 work in progress...
+
+See the current documentation/demo [here](https://flo-bit.github.io/svleek/).
 
 ## Todo
 

@@ -37,6 +37,10 @@ function addAllTailwindClassesToElement(dom) {
 		addClassesToElement(element, 'mt-6 text-xl leading-8');
 	});
 	dom.window.document.querySelectorAll('img').forEach((element) => {
+		// add base_url to src, if it doesn't start with http
+		const src = element.getAttribute('src');
+		if (!src.startsWith('http')) element.setAttribute('src', config.base_url + src);
+
 		addClassesToElement(element, 'rounded-xl bg-neutral-50 dark:bg-neutral-950 object-cover');
 	});
 	dom.window.document.querySelectorAll('blockquote').forEach((element) => {
@@ -46,6 +50,9 @@ function addAllTailwindClassesToElement(dom) {
 		);
 	});
 	dom.window.document.querySelectorAll('a').forEach((element) => {
+		const href = element.getAttribute('href');
+		if (!href.startsWith('http')) element.setAttribute('href', config.base_url + href);
+
 		addClassesToElement(
 			element,
 			'font-semibold text-accent-600 hover:text-accent-500 dark:text-accent-500 dark:hover:text-accent-400'
@@ -268,7 +275,7 @@ function processDirectory(dirPath, destPath, parentMenu = null) {
 			// replace - with space and turn the first letter to uppercase
 			title: fileName.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase()),
 			// remove src/routes from the path
-			href: newDestPath.replace(/^src\/routes/, '')
+			href: config.base_url + newDestPath.replace(/^src\/routes/, '')
 		};
 		if (parentMenu) {
 			parentMenu.children = parentMenu.children || [];
@@ -351,7 +358,9 @@ function setupStartPage() {
 	const pageContent = fs.readFileSync(pagePath, 'utf-8');
 	const newPageContent = pageContent.replace(
 		/<HeroScreenshot [\s|\S]*\/>/,
-		`<HeroScreenshot title="${heroTitle}" subtitle="${heroSubtitle}" image="${heroScreenshot}" buttonHref="${heroButtonHref}" buttonLabel="${heroButtonLabel}"/>`
+		`<HeroScreenshot title="${heroTitle}" subtitle="${heroSubtitle}" image="${heroScreenshot}" buttonHref="${
+			config.base_url + heroButtonHref
+		}" buttonLabel="${heroButtonLabel}"/>`
 	);
 	fs.writeFileSync(pagePath, newPageContent);
 }

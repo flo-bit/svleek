@@ -1,5 +1,5 @@
 <script>
-	let link = 'https://github.com/';
+	let link = 'https://github.com/flo-bit/svleek';
 </script>
 
 <a href={link} target="_blank">
