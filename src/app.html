@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/logo.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Svleek</title>
+
+		%sveltekit.head%
+		<script>
+			let dark = localStorage.getItem('darkMode');
+			if (dark) {
+				dark = JSON.parse(dark);
+			} else {
+				dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			}
+
+			var root = document.getElementsByTagName('html')[0];
+			if (dark) {
+				root.classList.add('dark');
+			} else {
+				root.classList.remove('dark');
+			}
+		</script>
+	</head>
+	<body
+		data-sveltekit-preload-data="hover"
+		class="bg-white dark:bg-neutral-950 transition-all duration-500 ease-out"
+	>
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

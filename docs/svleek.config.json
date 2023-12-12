@@ -1,0 +1,9 @@
+{
+    "title": "Svleek",
+    "subtitle": "Minimal, Beautiful, and Fast Documentation",
+    "image": "/screenshot.png",
+    "first_page": "/docs/introduction",
+    "button_label": "Read the docs!",
+    "github": "https://github.com/",
+    "accent": "emerald"
+}
