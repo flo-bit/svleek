@@ -1,4 +1,4 @@
-# svleek - simple, beautiful and fast documentation
+# svleek - simple, beautiful and fast static documentation generator
 
 work in progress...
 
