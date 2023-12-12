@@ -380,7 +380,10 @@ function setLogo() {
 	const logoPath = './src/lib/Logo.svelte';
 	const logoContent = fs.readFileSync(logoPath, 'utf-8');
 
-	const newLogoContent = logoContent.replace(/<slot>[\s|\S]*<\/slot>/, `<slot>${logo}</slot>`);
+	let newLogoContent = logoContent.replace(/<slot>[\s|\S]*<\/slot>/, `<slot>${logo}</slot>`);
+
+	// replace <a href="link" with <a href="config.base_url + link"
+	newLogoContent = newLogoContent.replace(/<a href="(.*)">/, `<a href="${config.base_url}$1">`);
 
 	console.log(newLogoContent == logoContent);
 	fs.writeFileSync(logoPath, newLogoContent);
