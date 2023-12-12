@@ -2,7 +2,7 @@
 	export let size = 'w-8';
 </script>
 
-<a href="https://flo-bit.github.io/svleek/">
+<a href="https://flo-bit.github.io/svleek">
 	<slot
 		><svg
 			class="{size} fill-accent-600 dark:fill-accent-600"

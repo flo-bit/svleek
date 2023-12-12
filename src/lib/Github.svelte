@@ -3,6 +3,7 @@
 </script>
 
 <a href={link} target="_blank">
+	<span class="sr-only">Github Repository</span>
 	<svg
 		class="h-6 w-6 fill-black dark:fill-white"
 		fill="currentColor"
