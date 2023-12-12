@@ -31,6 +31,7 @@ Create a `svleek.config.json` file in your docs folder to configure Svleek. The 
 
 ```json
 {
+	"base_url": "The base url of your github pages site", // e.g. "https://flo-bit.github.io/svleek"
 	"title": "Svleek", // sets the title of the main page
 	"subtitle": "Minimal, Beautiful, and Fast Documentation", // sets the subtitle of the main page
 	"image": "/screenshot.png", // sets the image of the main page
