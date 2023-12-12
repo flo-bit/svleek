@@ -2,6 +2,8 @@
 
 work in progress...
 
+See the current documentation/demo [here](https://flo-bit.github.io/svleek/).
+
 ## Todo
 
 ### should have
