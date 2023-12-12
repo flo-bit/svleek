@@ -24,7 +24,9 @@
 				show = false;
 			}}
 			class="fixed inset-0 z-50 bg-white/50 dark:bg-black/50 cursor-default"
-		></button>
+		>
+			<span class="sr-only">Close sidebar</span>
+	</button>
 		<div
 			transition:slide={{ axis: 'x', duration: 200 }}
 			class="fixed top-0 bottom-0 left-0 h-screen w-72 z-50"
