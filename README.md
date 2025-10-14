@@ -1,6 +1,7 @@
 # svleek - simple, beautiful and fast static documentation generator
 
-work in progress...
+> [!IMPORTANT]
+> This repository is archived, find the [new version with astro here](https://github.com/flo-bit/dogumentation)
 
 See the current documentation/demo [here](https://flo-bit.github.io/svleek/).
 
